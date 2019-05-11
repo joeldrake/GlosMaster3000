@@ -1,0 +1,121 @@
+:root {
+  --textColor: #222222;
+  --linkColor: blue;
+  --themeColor: blue;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  color: var(--textColor);
+  -webkit-font-smoothing: antialiased;
+  background: white;
+  text-align: center;
+}
+
+a {
+  color: var(--linkColor);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--linkColor);
+  text-decoration: underline;
+}
+
+hr {
+  border: 0;
+  border-bottom: 2px solid green;
+}
+
+pre {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.addPadding {
+  padding: 1rem;
+}
+
+.addPageWidth {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.spinner {
+  margin: 0 -26px -26px 0;
+  height: 26px;
+  width: 26px;
+  animation: rotation 0.6s infinite linear;
+  border-left: 4px solid rgba(255, 255, 255, 0.2);
+  border-right: 4px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+  border-top: 4px solid rgba(255, 255, 255, 1);
+  border-radius: 100%;
+}
+
+.spinner.takeSpace {
+  margin: 0;
+}
+
+.spinner.center {
+  margin: 0 auto -26px auto;
+}
+
+.spinner.center.takeSpace {
+  margin: 0 auto;
+}
+
+.spinner.onWhite {
+  border-left: 4px solid rgba(0, 0, 0, 0.1);
+  border-right: 4px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid rgba(0, 0, 0, 0.3);
+}
+
+.spinner.onBtn {
+  position: relative;
+  top: -3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+*:active,
+*:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+*:focus {
+  box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.5);
+}
+
+::placeholder {
+  color: gray;
+}

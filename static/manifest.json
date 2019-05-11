@@ -1,0 +1,21 @@
+{
+  "short_name": "Glosmaster3000",
+  "name": "Glosmaster3000",
+  "description": "Glosmaster3000 web app",
+  "icons": [
+    {
+      "src": "/static/img/infopingIcon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/infopingIcon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#f56085",
+  "background_color": "#f56085"
+}
