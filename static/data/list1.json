@@ -1,0 +1,30 @@
+{
+  "name": "Vanliga ord",
+  "langs": ["sv", "fr"],
+  "strings": [
+    {
+      "sv": {
+        "string": "Hej"
+      },
+      "fr": {
+        "string": "Bonjour"
+      }
+    },
+    {
+      "sv": {
+        "string": "Idag"
+      },
+      "fr": {
+        "string": "Aujourd'hui"
+      }
+    },
+    {
+      "sv": {
+        "string": "Tack"
+      },
+      "fr": {
+        "string": "Merci"
+      }
+    }
+  ]
+}

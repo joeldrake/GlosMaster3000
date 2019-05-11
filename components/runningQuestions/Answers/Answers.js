@@ -5,11 +5,20 @@ import './Answers.css';
 
 class Answers extends React.Component {
   render() {
+    const { listCurrent } = this.props.lists;
+
+    let answer1, answer2, answer3;
+    if (listCurrent) {
+      answer1 = listCurrent.strings[0].fr.string;
+      answer2 = listCurrent.strings[1].fr.string;
+      answer3 = listCurrent.strings[2].fr.string;
+    }
+
     return (
       <div className={`Answers`}>
-        <Answer index={1}>Svar 1</Answer>
-        <Answer index={2}>Svar 2</Answer>
-        <Answer index={3}>Svar 3</Answer>
+        <Answer index={1}>{answer1}</Answer>
+        <Answer index={2}>{answer2}</Answer>
+        <Answer index={3}>{answer3}</Answer>
       </div>
     );
   }
@@ -18,5 +27,6 @@ class Answers extends React.Component {
 export default connect(store => {
   return {
     session: store.session,
+    lists: store.lists,
   };
 })(Answers);

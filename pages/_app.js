@@ -4,6 +4,7 @@ import withRedux from 'next-redux-wrapper';
 import { initStore } from './../store.js';
 import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
+import { fetchList } from '@actions/listsActions.js';
 import Modal from '@components/common/Modal/Modal.js';
 import '@styles/main.css';
 
@@ -34,6 +35,8 @@ class MyApp extends App {
 
   componentDidMount() {
     //do stuff on page load that is not serverside rendered here
+
+    this.props.dispatch(fetchList('list1'));
   }
 
   render() {
