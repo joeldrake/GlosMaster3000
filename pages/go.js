@@ -2,9 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import InlineSVG from 'svg-inline-react';
 import Link from 'next/link';
+import Router from 'next/router';
 import Layout from '@components/Layout.js';
 import Button from '@components/common/Button/Button.js';
-import Game from '@components/game/Game/Game.js';
+import Quiz from '@components/quiz/Quiz/Quiz.js';
 import { svgChevronLeft } from '@utils//svgImages.js';
 import { openModal, closeModal } from '@actions/modalActions.js';
 
@@ -33,21 +34,15 @@ class Go extends React.Component {
     );
   };
 
-  componentDidUpdate(prevProps) {
-    const { listsLoaded, gameActive } = this.props.game;
-    const listsLoadedPrev = prevProps.game.listsLoaded;
-
-    console.log('listsLoaded', listsLoaded);
-    console.log('listsLoadedPrev', listsLoadedPrev);
-    console.log('gameActive', !!gameActive);
-
-    if (listsLoaded && !gameActive) {
-      //lists are loaded but no active game, go back to start
-      console.log('Go back to start');
+  componentDidMount() {
+    const { quizActive } = this.props.quiz;
+    if (!quizActive) {
+      Router.push(`/`);
     }
   }
 
   render() {
+    const { quizActive } = this.props.quiz;
     const backButtonStyle = {
       position: `absolute`,
       top: `0.2rem`,
@@ -66,7 +61,7 @@ class Go extends React.Component {
             <InlineSVG src={svgChevronLeft} alt={`Tillbaka`} />
           </Button>
 
-          <Game />
+          {quizActive ? <Quiz /> : null}
         </div>
       </Layout>
     );
@@ -75,6 +70,6 @@ class Go extends React.Component {
 
 export default connect(store => {
   return {
-    game: store.game,
+    quiz: store.quiz,
   };
 })(Go);

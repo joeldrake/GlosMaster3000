@@ -12,15 +12,15 @@ class Index extends React.Component {
     return {};
   }
 
-  handleListClick = list => {
+  handleQuizClick = quiz => {
     this.props.dispatch({
-      type: 'UPDATE_GAME_ACTIVE',
-      gameActive: list,
+      type: 'UPDATE_QUIZ_ACTIVE',
+      quizActive: quiz,
     });
   };
 
   render() {
-    const { lists } = this.props.game;
+    const { quizzes } = this.props.quiz;
     return (
       <Layout>
         <style jsx>{`
@@ -31,12 +31,12 @@ class Index extends React.Component {
         <div className={`main addPadding`}>
           <h1>Glosmaster3000</h1>
 
-          {lists
-            ? lists.map((list, i) => {
+          {quizzes
+            ? quizzes.map((quiz, i) => {
                 return (
                   <Link href={`/go`} key={i}>
-                    <Button onClick={() => this.handleListClick(list)}>
-                      {list.name}
+                    <Button onClick={() => this.handleQuizClick(quiz)}>
+                      {quiz.name}
                     </Button>
                   </Link>
                 );
@@ -52,6 +52,6 @@ export default connect(store => {
   return {
     layout: store.layout,
     session: store.session,
-    game: store.game,
+    quiz: store.quiz,
   };
 })(Index);

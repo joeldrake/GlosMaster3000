@@ -1,17 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Answer from '@components/game/Answer/Answer.js';
+import Answer from '@components/quiz/Answer/Answer.js';
 import './Answers.css';
 
 class Answers extends React.Component {
   render() {
-    const { gameActive } = this.props.game;
+    const { quizActive } = this.props.quiz;
 
     let answer1, answer2, answer3;
-    if (gameActive) {
-      answer1 = gameActive.strings[0].fr.string;
-      answer2 = gameActive.strings[1].fr.string;
-      answer3 = gameActive.strings[2].fr.string;
+    if (quizActive) {
+      answer1 = quizActive.strings[0].fr.string;
+      answer2 = quizActive.strings[1].fr.string;
+      answer3 = quizActive.strings[2].fr.string;
     }
 
     return (
@@ -27,6 +27,6 @@ class Answers extends React.Component {
 export default connect(store => {
   return {
     session: store.session,
-    game: store.game,
+    quiz: store.quiz,
   };
 })(Answers);

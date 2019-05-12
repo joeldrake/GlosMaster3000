@@ -1,4 +1,4 @@
-export function fetchList(name) {
+export function fetchQuizzes(name) {
   return async (dispatch, getState) => {
     if (!name) return;
 
@@ -15,17 +15,12 @@ export function fetchList(name) {
       }
 
       /*
-        temporary putting fetched list in both currentLists and lists
+        temporary putting fetched list in both quizActive and quizzes
       */
 
       dispatch({
-        type: 'UPDATE_LISTS',
-        lists: [data],
-      });
-
-      dispatch({
-        type: 'UPDATE_GAME_ACTIVE',
-        gameActive: data,
+        type: 'UPDATE_QUIZZES',
+        quizzes: [data],
       });
     } catch (e) {
       if (logToConsole && typeof window !== 'undefined') {
