@@ -1,7 +1,7 @@
 {
-  "short_name": "Glosmaster3000",
-  "name": "Glosmaster3000",
-  "description": "Glosmaster3000 web app",
+  "short_name": "QuizMaster3000",
+  "name": "QuizMaster3000",
+  "description": "QuizMaster3000 web app",
   "icons": [
     {
       "src": "/static/img/infopingIcon.png",

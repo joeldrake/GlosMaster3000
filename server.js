@@ -23,7 +23,7 @@ app
     server.get('/logout', (req, res) => {
       const cookies = new Cookies(req, res);
       //setting cookie with no value to delete it
-      cookies.set('Glosmaster3000Session');
+      cookies.set('QuizMaster3000Session');
 
       res.redirect(`/`);
     });

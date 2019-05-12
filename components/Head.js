@@ -1,9 +1,9 @@
 import NextHead from 'next/head';
 
-const defaultTitle = 'Glosmaster3000';
-const defaultDescription = 'Välkommen till Glosmaster3000';
+const defaultTitle = 'QuizMaster3000';
+const defaultDescription = 'Välkommen till QuizMaster3000';
 const defaultIcon = '/static/img/infopingIcon.png';
-const defaultOGURL = 'https://glosmaster3000.com';
+const defaultOGURL = 'https://quizmaster3000.com';
 const defaultOGImage = '/static/img/infopingHeader.jpg';
 
 const Head = props => (

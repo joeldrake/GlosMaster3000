@@ -29,7 +29,7 @@ class Index extends React.Component {
           }
         `}</style>
         <div className={`main addPadding`}>
-          <h1>Glosmaster3000</h1>
+          <h1>QuizMaster3000</h1>
 
           {quizzes
             ? quizzes.map((quiz, i) => {
