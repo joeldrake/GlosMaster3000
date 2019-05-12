@@ -5,6 +5,7 @@ import Answers from '@components/quiz/Answers/Answers.js';
 import './Quiz.css';
 
 class Quiz extends React.Component {
+  //todo: add game logic here and pass down current qustions and answers as props
   render() {
     return (
       <div className={`Quiz`}>
