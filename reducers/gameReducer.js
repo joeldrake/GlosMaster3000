@@ -1,19 +1,21 @@
 const initialState = {
+  gameActive: null,
   lists: null,
-  listCurrent: null,
+  listsLoaded: false,
 };
 
-export default function lists(state = initialState, action) {
+export default function game(state = initialState, action) {
   switch (action.type) {
     case 'UPDATE_LISTS':
       return {
         ...state,
         lists: action.lists,
+        listsLoaded: true,
       };
-    case 'UPDATE_LIST_CURRENT':
+    case 'UPDATE_GAME_ACTIVE':
       return {
         ...state,
-        listCurrent: action.listCurrent,
+        gameActive: action.gameActive,
       };
     default:
       return state;

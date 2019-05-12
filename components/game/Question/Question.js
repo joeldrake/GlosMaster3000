@@ -4,9 +4,9 @@ import './Question.css';
 
 class Question extends React.Component {
   render() {
-    const { listCurrent } = this.props.lists;
+    const { gameActive } = this.props.game;
 
-    const question = listCurrent ? listCurrent.strings[0].sv.string : null;
+    const question = gameActive ? gameActive.strings[0].sv.string : null;
 
     return <div className={`Question`}>{question}</div>;
   }
@@ -14,6 +14,6 @@ class Question extends React.Component {
 
 export default connect(store => {
   return {
-    lists: store.lists,
+    game: store.game,
   };
 })(Question);

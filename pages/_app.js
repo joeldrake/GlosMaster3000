@@ -4,7 +4,7 @@ import withRedux from 'next-redux-wrapper';
 import { initStore } from './../store.js';
 import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
-import { fetchList } from '@actions/listsActions.js';
+import { fetchList } from '@actions/gameActions.js';
 import Modal from '@components/common/Modal/Modal.js';
 import '@styles/main.css';
 

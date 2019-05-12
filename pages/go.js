@@ -4,7 +4,7 @@ import InlineSVG from 'svg-inline-react';
 import Link from 'next/link';
 import Layout from '@components/Layout.js';
 import Button from '@components/common/Button/Button.js';
-import Questions from '@components/runningQuestions/Questions/Questions.js';
+import Game from '@components/game/Game/Game.js';
 import { svgChevronLeft } from '@utils//svgImages.js';
 import { openModal, closeModal } from '@actions/modalActions.js';
 
@@ -52,7 +52,7 @@ class Go extends React.Component {
             <InlineSVG src={svgChevronLeft} alt={`Tillbaka`} />
           </Button>
 
-          <Questions />
+          <Game />
         </div>
       </Layout>
     );

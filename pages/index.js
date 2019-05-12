@@ -14,13 +14,13 @@ class Index extends React.Component {
 
   handleListClick = list => {
     this.props.dispatch({
-      type: 'UPDATE_LIST_CURRENT',
-      listCurrent: list,
+      type: 'UPDATE_GAME_ACTIVE',
+      gameActive: list,
     });
   };
 
   render() {
-    const { lists } = this.props.lists;
+    const { lists } = this.props.game;
     return (
       <Layout>
         <style jsx>{`
@@ -52,6 +52,6 @@ export default connect(store => {
   return {
     layout: store.layout,
     session: store.session,
-    lists: store.lists,
+    game: store.game,
   };
 })(Index);

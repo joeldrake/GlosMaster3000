@@ -22,11 +22,6 @@ export function fetchList(name) {
         type: 'UPDATE_LISTS',
         lists: [data],
       });
-
-      dispatch({
-        type: 'UPDATE_LIST_CURRENT',
-        listCurrent: data,
-      });
     } catch (e) {
       if (logToConsole && typeof window !== 'undefined') {
         console.log(e);

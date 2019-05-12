@@ -1,17 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Answer from '@components/runningQuestions/Answer/Answer.js';
+import Answer from '@components/game/Answer/Answer.js';
 import './Answers.css';
 
 class Answers extends React.Component {
   render() {
-    const { listCurrent } = this.props.lists;
+    const { gameActive } = this.props.game;
 
     let answer1, answer2, answer3;
-    if (listCurrent) {
-      answer1 = listCurrent.strings[0].fr.string;
-      answer2 = listCurrent.strings[1].fr.string;
-      answer3 = listCurrent.strings[2].fr.string;
+    if (gameActive) {
+      answer1 = gameActive.strings[0].fr.string;
+      answer2 = gameActive.strings[1].fr.string;
+      answer3 = gameActive.strings[2].fr.string;
     }
 
     return (
@@ -27,6 +27,6 @@ class Answers extends React.Component {
 export default connect(store => {
   return {
     session: store.session,
-    lists: store.lists,
+    game: store.game,
   };
 })(Answers);
