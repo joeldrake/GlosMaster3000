@@ -22,6 +22,11 @@ export function fetchList(name) {
         type: 'UPDATE_LISTS',
         lists: [data],
       });
+
+      dispatch({
+        type: 'UPDATE_GAME_ACTIVE',
+        gameActive: data,
+      });
     } catch (e) {
       if (logToConsole && typeof window !== 'undefined') {
         console.log(e);

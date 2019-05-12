@@ -33,6 +33,20 @@ class Go extends React.Component {
     );
   };
 
+  componentDidUpdate(prevProps) {
+    const { listsLoaded, gameActive } = this.props.game;
+    const listsLoadedPrev = prevProps.game.listsLoaded;
+
+    console.log('listsLoaded', listsLoaded);
+    console.log('listsLoadedPrev', listsLoadedPrev);
+    console.log('gameActive', !!gameActive);
+
+    if (listsLoaded && !gameActive) {
+      //lists are loaded but no active game, go back to start
+      console.log('Go back to start');
+    }
+  }
+
   render() {
     const backButtonStyle = {
       position: `absolute`,
@@ -61,6 +75,6 @@ class Go extends React.Component {
 
 export default connect(store => {
   return {
-    session: store.session,
+    game: store.game,
   };
 })(Go);

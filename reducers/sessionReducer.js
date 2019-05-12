@@ -1,6 +1,6 @@
 const initialState = {
   loggedIn: false,
-  logToConsole: true,
+  logToConsole: false,
   siteUrl: null,
 };
 
