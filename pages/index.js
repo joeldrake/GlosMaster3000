@@ -1,8 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Link from 'next/link';
 import Layout from '@components/Layout.js';
 import Button from '@components/common/Button/Button.js';
-import Link from 'next/link';
+import InlineSVG from 'svg-inline-react';
+import { svgTextLogo } from '@utils/svgImages.js';
 
 class Index extends React.Component {
   static async getInitialProps(ctx) {
@@ -24,12 +26,15 @@ class Index extends React.Component {
     return (
       <Layout>
         <style jsx>{`
-          .main {
-            text-align: center;
+          .main__logo {
+            margin: 1rem auto 2rem auto;
+            max-width: var(--maxWidth);
           }
         `}</style>
         <div className={`main addPadding`}>
-          <h1>QuizMaster3000</h1>
+          <div className={`main__logo`}>
+            <InlineSVG src={svgTextLogo} alt={`QuizMaster3000`} />
+          </div>
 
           {quizzes
             ? quizzes.map((quiz, i) => {

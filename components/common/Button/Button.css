@@ -7,8 +7,8 @@
   text-transform: uppercase;
   line-height: 1.5em;
   border: 0;
-  color: #fff;
-  background-color: blue;
+  color: #ffffff;
+  background-color: var(--accentColor);
   font-size: 13px;
   border-radius: 25px;
   transition: background-color 0.2s;
@@ -22,20 +22,22 @@
 
 .Button:hover {
   text-decoration: none;
+  opacity: 0.8;
 }
 
 .Button--transparent {
   background-color: transparent;
-  color: blue;
+  color: var(--accentColor);
 }
 
 .Button--transparent:hover {
   background-color: rgba(0, 0, 0, 0.1);
+  opacity: 1;
 }
 
 .Button--white {
   background: #fff;
-  color: #222;
+  color: var(--foregroundColor);
 }
 
 .Button--round {
@@ -56,4 +58,12 @@
   opacity: 0.5;
   cursor: default;
   pointer-events: none;
+}
+
+.Button:focus {
+  box-shadow: 0 0 0 3px var(--foregroundColor);
+}
+
+.Button--transparent:focus {
+  box-shadow: 0 0 0 3px var(--accentColor);
 }

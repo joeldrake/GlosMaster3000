@@ -1,5 +1,10 @@
 const initialState = {
   menuOpen: false,
+  branding: {
+    background: '#F0F4D3',
+    foreground: '#574827',
+    accent: '#86BC30',
+  },
 };
 
 export default function layout(state = initialState, action) {

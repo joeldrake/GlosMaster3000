@@ -14,11 +14,6 @@ class Login extends React.Component {
   render() {
     return (
       <Layout>
-        <style jsx>{`
-          .login {
-            text-align: center;
-          }
-        `}</style>
         <div className={`login addPadding`}>
           <h1>Login</h1>
           <Link href={`/`}>

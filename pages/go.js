@@ -45,8 +45,8 @@ class Go extends React.Component {
     const { quizActive } = this.props.quiz;
     const backButtonStyle = {
       position: `absolute`,
-      top: `0.2rem`,
-      left: `0.2rem`,
+      top: `2rem`,
+      left: `1rem`,
     };
 
     return (

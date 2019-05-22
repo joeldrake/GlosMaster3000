@@ -16,8 +16,6 @@
     "next-redux-wrapper": "^3.0.0-alpha.2",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-cli": "^6.1.2",
-    "postcss-css-variables": "^0.12.0",
-    "postcss-preset-env": "^6.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-ga": "^2.5.7",

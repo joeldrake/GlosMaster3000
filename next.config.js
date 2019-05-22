@@ -18,6 +18,7 @@ module.exports = withCSS({
     config.resolve.alias['@styles'] = path.join(__dirname, 'styles');
     config.resolve.alias['@actions'] = path.join(__dirname, 'actions');
     config.resolve.alias['@utils'] = path.join(__dirname, 'utils');
+    config.resolve.alias['@img'] = path.join(__dirname, 'static/img');
 
     return config;
   },
