@@ -8,7 +8,7 @@
   line-height: 1.5em;
   border: 0;
   color: #ffffff;
-  background-color: var(--accentColor);
+  background-color: var(--accentColorGreen);
   font-size: 13px;
   border-radius: 25px;
   transition: background-color 0.2s;
@@ -27,7 +27,7 @@
 
 .Button--transparent {
   background-color: transparent;
-  color: var(--accentColor);
+  color: var(--accentColorGreen);
 }
 
 .Button--transparent:hover {
@@ -61,9 +61,9 @@
 }
 
 .Button:focus {
-  box-shadow: 0 0 0 3px var(--foregroundColor);
+  box-shadow: 0 0 0 3px var(--accentColorBlue);
 }
 
 .Button--transparent:focus {
-  box-shadow: 0 0 0 3px var(--accentColor);
+  box-shadow: 0 0 0 3px var(--accentColorGreen);
 }

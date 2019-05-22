@@ -3,7 +3,8 @@ const initialState = {
   branding: {
     background: '#F0F4D3',
     foreground: '#574827',
-    accent: '#86BC30',
+    accent: '#66bc30',
+    accentReverse: '#bc3630',
   },
 };
 

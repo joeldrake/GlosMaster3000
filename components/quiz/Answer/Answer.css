@@ -5,4 +5,9 @@
 .Answer .Button {
   width: 100%;
   max-width: var(--maxWidth);
+  background-color: var(--accentColorBlue);
+}
+
+.Answer .Button:focus {
+  box-shadow: 0 0 0 3px var(--accentColorGreen);
 }

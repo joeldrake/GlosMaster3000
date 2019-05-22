@@ -1,7 +1,9 @@
 :root {
   --foregroundColor: #574827;
   --backgroundColor: #f0f4d3;
-  --accentColor: #86bc30;
+  --accentColorRed: #bc3630;
+  --accentColorBlue: #3068bc;
+  --accentColorGreen: #66bc30;
   --maxWidth: 400px;
 }
 
@@ -28,7 +30,7 @@ body {
 }
 
 a {
-  color: var(--accentColor);
+  color: var(--accentColorGreen);
   text-decoration: none;
 }
 
@@ -113,7 +115,7 @@ pre {
 }
 
 *:focus {
-  box-shadow: 0 0 0 3px var(--accentColor);
+  box-shadow: 0 0 0 3px var(--accentColorGreen);
 }
 
 ::placeholder {
